@@ -27,13 +27,13 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-        .authorizeHttpRequests(
-            auth -> auth.requestMatchers("/").authenticated()
+//        .authorizeHttpRequests(
+//            auth -> auth.requestMatchers("/").authenticated()
 //            .requestMatchers("/auth/login").anonymous()
 //            .requestMatchers("/api/**", "/**").hasRole("ADMIN")
 //            .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
 //            .anyRequest().authenticated()
-            )
+//            )
         .formLogin(
             formLogin -> formLogin.loginProcessingUrl("/process_login")
             .successHandler(new SuccessUserHandler())

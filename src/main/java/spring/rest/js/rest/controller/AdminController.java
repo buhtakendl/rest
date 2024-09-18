@@ -38,8 +38,8 @@ public class AdminController {
         return user;
     }
 
-    @PutMapping("/users")
-    public User updateUser (@RequestBody User user) {
+    @PutMapping("/users/{id}")
+    public User updateUser (@PathVariable("id") long id, @RequestBody User user) {
 //        getUserRoles(user);
         userService.updateUser(user);
         return user;

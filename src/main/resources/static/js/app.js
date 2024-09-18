@@ -8,7 +8,7 @@ $(async function () {
 const userFetchService = {
     head: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=UTF-8',
         'Referer': null
     },
     findAllUsers: async () => await fetch('api/users'),
@@ -182,6 +182,7 @@ async function addNewUser() {
             password: password
         }
         await userFetchService.addNewUser(data);
+        await getTableWithUsers();
             addUserForm.find('#AddNewUserName').val('');
             addUserForm.find('#AddNewUserSurname').val('');
             addUserForm.find('#AddNewUserAge').val('');
