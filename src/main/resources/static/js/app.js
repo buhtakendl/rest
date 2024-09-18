@@ -156,7 +156,6 @@ async function editUser(modal, id) {
 }
 
 
-// удаляем юзера из модалки удаления
 async function deleteUser(modal, id) {
     await userFetchService.deleteUser(id);
     await getTableWithUsers();
