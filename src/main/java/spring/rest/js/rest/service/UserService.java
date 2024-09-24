@@ -6,7 +6,8 @@ import spring.rest.js.rest.model.User;
 import java.util.List;
 
 public interface UserService {
-        void saveUser(User user);
+
+    void saveUser(User user);
 
     void updateUser(User user);
 

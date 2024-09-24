@@ -47,8 +47,7 @@ async function getTableWithUsers() {
             })
         })
 
-    // обрабатываем нажатие на любую из кнопок edit или delete
-    // достаем из нее данные и отдаем модалке, которую к тому же открываем
+
     $("#mainTableWithUsers").find('button').on('click', (event) => {
         let defaultModal = $('#someDefaultModal');
 
